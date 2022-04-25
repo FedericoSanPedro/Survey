@@ -1,47 +1,10 @@
-
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String
-})
-
-const count = ref(0)
-</script>
-
 <template>
-  <!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-<!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-gray-50">
-  <body class="h-full">
-  ```
--->
-<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-md w-full space-y-8">
     <div>
       <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
-      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Register for free</h2>
       <p class="mt-2 text-center text-sm text-gray-600">
         Or
-        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> Register for free </a>
+        <router-link :to="{name: 'Login'}" href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> Login to your account </router-link>
       </p>
     </div>
     <form class="mt-8 space-y-6" action="#" method="POST">
@@ -80,8 +43,6 @@ const count = ref(0)
         </button>
       </div>
     </form>
-  </div>
-</div>
 
 </template>
 
